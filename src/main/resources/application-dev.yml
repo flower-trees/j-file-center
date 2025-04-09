@@ -10,20 +10,7 @@ spring:
       host: localhost
       port: 6379
 
-management:
-  server:
-    port: 12306
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-      base-path: /java
-  metrics:
-    tags:
-      application: ${spring.application.name}
-
 file:
   save: local
-
   local:
     base-path: ./uploads

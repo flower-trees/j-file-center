@@ -22,3 +22,15 @@ mybatis:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
+
+management:
+  server:
+    port: 12306
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /java
+  metrics:
+    tags:
+      application: ${spring.application.name}
